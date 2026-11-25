@@ -35,7 +35,12 @@ export const site = {
     "free shaadi card without watermark",
   ],
   adsense: {
-    client: process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "",
+    // A publisher id is public — it ships in every page's HTML — so it lives
+    // here as the default rather than relying on the deploy having the env var.
+    client: process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-1369117380461310",
+    // Set once you create a display unit in AdSense; until then the script
+    // loads (enough for verification and Auto ads) but the footer strip
+    // renders no <ins>.
     footerSlot: process.env.NEXT_PUBLIC_ADSENSE_FOOTER_SLOT || "",
   },
   upi: {
