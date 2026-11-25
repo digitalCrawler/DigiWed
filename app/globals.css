@@ -1,0 +1,297 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================================================
+   VERDURE — a garden at dusk
+   Nature/Organic · 2020s contemporary · light
+   Density 5/10 · Variance 6/10 · Motion 8/10
+   =================================================================== */
+
+:root {
+  --cream: #f3ecd9;
+  --parchment: #faf6ea;
+  --sage: #7d9273;
+  --moss: #55673f;
+  --brass: #b08d3e;
+  --rose: #c98d8d;
+  --ink: #26301f;
+  --dusk: #3f4e2f;
+
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 16px;
+
+  --s-sm: 1rem;
+  --s-md: 2rem;
+  --s-lg: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  /* dusk settling over a garden: green from below, brass light from the west */
+  background-image:
+    radial-gradient(1200px 620px at 8% -10%, rgba(125, 146, 115, 0.34) 0%, rgba(125, 146, 115, 0) 62%),
+    radial-gradient(1000px 540px at 96% -4%, rgba(176, 141, 62, 0.26) 0%, rgba(176, 141, 62, 0) 60%),
+    radial-gradient(900px 700px at 50% 108%, rgba(85, 103, 63, 0.22) 0%, rgba(85, 103, 63, 0) 66%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- noise / grain, sits above the wash and below everything else --- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: rgba(176, 141, 62, 0.3);
+  color: var(--ink);
+}
+
+@layer components {
+  /* ----------------------------- buttons ----------------------------- */
+  .btn {
+    @apply relative inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold
+           transition-[transform,box-shadow,background-color,color] duration-300 ease-out
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-moss/50 focus-visible:ring-offset-2
+           focus-visible:ring-offset-cream;
+    border-radius: var(--r-lg) var(--r-sm) var(--r-lg) var(--r-sm); /* leaf */
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  /* main call to action — dusty rose petal */
+  .btn-rose {
+    @apply btn text-ink shadow-soft;
+    background-image: linear-gradient(145deg, #d8a0a0 0%, #c98d8d 55%, #bf8585 100%);
+  }
+  .btn-rose:hover {
+    @apply shadow-lift;
+    background-image: linear-gradient(145deg, #e0acac 0%, #cf9494 55%, #c48b8b 100%);
+  }
+
+  /* heavier action — deep moss */
+  .btn-primary {
+    @apply btn text-cream shadow-soft;
+    background-image: linear-gradient(150deg, #5e7246 0%, #55673f 60%, #44542f 100%);
+  }
+  .btn-primary:hover {
+    @apply shadow-lift;
+    background-image: linear-gradient(150deg, #6b8150 0%, #5e7246 60%, #4c5e36 100%);
+  }
+
+  .btn-ghost {
+    @apply btn border border-moss/25 bg-parchment/80 text-ink backdrop-blur-sm hover:border-moss/50 hover:bg-parchment;
+  }
+
+  .btn-chip {
+    @apply inline-flex items-center gap-1.5 border border-moss/20 bg-parchment/80 px-3 py-1.5
+           text-xs font-medium text-ink/70 transition-all duration-300
+           hover:-translate-y-0.5 hover:border-sage hover:text-ink;
+    border-radius: var(--r-md) var(--r-sm) var(--r-md) var(--r-sm);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  /* ----------------------------- surfaces ----------------------------- */
+  .card-surface {
+    @apply border border-moss/15 bg-parchment/85 shadow-soft backdrop-blur-sm;
+    border-radius: var(--r-lg);
+  }
+
+  .label {
+    @apply mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-moss/75;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  .input {
+    @apply w-full border border-moss/25 bg-parchment px-3 py-2 text-sm text-ink outline-none
+           transition-all duration-300 placeholder:text-ink/30
+           focus:border-sage focus:ring-2 focus:ring-sage/25;
+    border-radius: var(--r-md);
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  /* ----------------------------- prose ----------------------------- */
+  .seo-prose {
+    @apply text-[15.5px] leading-[1.85] text-ink/80;
+  }
+  .seo-prose h2 {
+    @apply relative mb-3 mt-10 font-display text-[1.45rem] font-bold text-moss;
+  }
+  .seo-prose h2::after {
+    content: "";
+    @apply mt-2 block h-px w-16 origin-left bg-gradient-to-r from-brass to-transparent;
+  }
+  .seo-prose h3 {
+    @apply mb-1.5 mt-6 font-display text-[1.05rem] font-bold text-ink;
+  }
+  .seo-prose p {
+    @apply mb-4;
+  }
+  .seo-prose ul {
+    @apply mb-4 space-y-1.5 pl-5;
+    list-style: none;
+  }
+  .seo-prose li {
+    @apply relative;
+  }
+  .seo-prose li::before {
+    content: "";
+    position: absolute;
+    left: -1.1rem;
+    top: 0.62em;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px 2px 999px 2px; /* tiny leaf */
+    background: var(--sage);
+  }
+  .seo-prose a {
+    @apply font-semibold text-moss underline decoration-brass/50 decoration-1 underline-offset-[3px]
+           transition-colors hover:text-dusk hover:decoration-brass;
+  }
+
+  /* --------------------------- decoration --------------------------- */
+  .leaf-rule {
+    @apply mx-auto h-px w-24 bg-gradient-to-r from-transparent via-sage to-transparent;
+  }
+}
+
+/* --------------------------- motion --------------------------- */
+/* Motion 8/10 — sections arrive, accents keep breathing. */
+
+.stagger > * {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.stagger > *:nth-child(1) { animation-delay: 0.04s; }
+.stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger > *:nth-child(3) { animation-delay: 0.16s; }
+.stagger > *:nth-child(4) { animation-delay: 0.22s; }
+.stagger > *:nth-child(5) { animation-delay: 0.28s; }
+.stagger > *:nth-child(6) { animation-delay: 0.34s; }
+.stagger > *:nth-child(n + 7) { animation-delay: 0.4s; }
+
+/* a slow sheen crossing the main CTA */
+.btn-rose::after,
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255, 252, 240, 0.45) 48%,
+    transparent 66%
+  );
+  background-size: 220% 100%;
+  background-position: -120% 0;
+  opacity: 0;
+}
+.btn-rose:hover::after,
+.btn-primary:hover::after {
+  opacity: 1;
+  animation: shimmer 1.1s ease-out;
+}
+
+/* card thumbnails lift like a leaf catching light */
+.grow-lift {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+.grow-lift:hover {
+  transform: translateY(-5px) rotate(-0.5deg);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+  from { background-position: -120% 0; }
+  to   { background-position: 220% 0; }
+}
+@keyframes sway {
+  0%, 100% { transform: rotate(-5deg); }
+  50%      { transform: rotate(5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .btn:hover,
+  .grow-lift:hover { transform: none; }
+}
+
+/* keep the sticky footer ad from covering page content */
+.has-footer-ad {
+  padding-bottom: 72px;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body::before { display: none !important; }
+}
+
+/* drag handles in the editor */
+.handle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: var(--parchment);
+  border: 2px solid var(--moss);
+  box-shadow: 0 1px 4px rgba(38, 48, 31, 0.25);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(125, 146, 115, 0.35);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--moss);
+  border: 2px solid var(--parchment);
+  box-shadow: 0 1px 4px rgba(38, 48, 31, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}

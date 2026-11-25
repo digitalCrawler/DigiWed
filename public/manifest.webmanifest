@@ -1,0 +1,12 @@
+{
+  "name": "Shaadi Card Studio — Free Wedding Invitation Maker",
+  "short_name": "ShaadiCard",
+  "description": "Free wedding invitation card maker for every faith. Edit a template and download HD.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBF4",
+  "theme_color": "#FFFBF4",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
