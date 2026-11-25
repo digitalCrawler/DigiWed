@@ -10,8 +10,8 @@ import FooterAd from "@/components/FooterAd";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Free Wedding Invitation Card Maker — Hindu, Muslim, Christian, Sikh & More",
-    template: "%s | Shaadi Card Studio",
+    default: "DigiWeds — Free Wedding Card & Video Invitation Maker",
+    template: "%s | DigiWeds",
   },
   description: site.description,
   keywords: site.keywords,
@@ -25,12 +25,12 @@ export const metadata: Metadata = {
     locale: site.locale,
     url: site.url,
     siteName: site.name,
-    title: "Free Wedding Invitation Card Maker for Every Faith",
+    title: "DigiWeds — Free Wedding Card & Video Invitation Maker",
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Wedding Invitation Card Maker — Shaadi Card Studio",
+    title: "DigiWeds — Free Wedding Card & Video Invitation Maker",
     description: site.description,
   },
   robots: {

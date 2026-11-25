@@ -1,4 +1,4 @@
-# Shaadi Card Studio
+# DigiWeds
 
 Free wedding invitation maker for every faith — Hindu, Muslim Nikah, Christian,
 Sikh Anand Karaj, Jain, Buddhist, interfaith/court, plus engagement, haldi-mehndi-sangeet

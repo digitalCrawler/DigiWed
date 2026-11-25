@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: [
       `${c.name.toLowerCase()} invitation card`,
       `${c.name.toLowerCase()} wedding card template`,
-      `${c.hindi} card`,
+      `${c.subtitle} card`,
       "free wedding card maker",
       "editable wedding invitation",
     ],
@@ -39,13 +39,13 @@ const EXTRA: Record<string, { intro: string; body: { h: string; p: string }[]; f
     intro:
       "Hindu shaadi ke card ki shuruaat hamesha mangal-kaamna se hoti hai — isliye in templates mein Shri Ganeshay Namah, Om aur kalash pehle se sahi jagah par lage hain.",
     body: [
-      { h: "Card mein kya likha jaaye", p: "Sabse upar invocation (॥ श्री गणेशाय नमः ॥ ya ॥ शुभ विवाह ॥), phir vadhu-var ke naam, uske baad lagn ka din aur muhurt ka samay, venue, aur ant mein 'aapke aashirvaad ki abhilasha ke saath' ke saath parivaar ka naam. Agar tilak, mehndi, haldi aur reception alag din hain to unke liye alag card banaiye." },
+      { h: "Card mein kya likha jaaye", p: "Sabse upar invocation (“Shri Ganeshay Namah” ya “Shubh Vivah”), phir vadhu-var ke naam, uske baad lagn ka din aur muhurt ka samay, venue, aur ant mein 'aapke aashirvaad ki abhilasha ke saath' ke saath parivaar ka naam. Agar tilak, mehndi, haldi aur reception alag din hain to unke liye alag card banaiye." },
       { h: "Rang ka chunaav", p: "Marigold aur maroon traditional hain; ivory-gold thoda modern aur print mein sasta padta hai; peacock teal un couples ke liye hai jo kuch alag chahte hain. Hindi text ke liye Tiro Devanagari sabse saaf padhne mein aata hai, aur Rozha One naam ko bold look deta hai." },
     ],
     faq: [
       { q: "Hindi mein Hindu wedding card bana sakte hain?", a: "Haan. Hindu category ke kai templates pehle se Hindi mein hain (Ganesh Vandana, Kalash Maroon, Roka Marigold). Editor mein Tiro Devanagari, Mukta aur Rozha One fonts hain — aap seedha Devanagari type kar sakte hain." },
       { q: "Ganesh ji ki photo laga sakte hain?", a: "Editor mein 'Om' aur 'Kalash' jaise saaf-suthre symbols diye hain jo har jagah theek chhapte hain. Agar aap apni tasveer lagana chahte hain to Add tab se photo upload karke use card par rakh sakte hain." },
-      { q: "Muhurt ka samay kaise likhein?", a: "Din ka naam, taarikh aur samay — teeno likhiye, jaise 'रविवार, १५ फरवरी २०२६ · सायं ७:०० बजे से'. Mehmaan ko din ka naam dekh kar hi yaad rehta hai." },
+      { q: "Muhurt ka samay kaise likhein?", a: "Din ka naam, taarikh aur samay — teeno likhiye, jaise “Ravivaar, 15 February 2026 · shaam 7:00 baje se”. Mehmaan ko din ka naam dekh kar hi yaad rehta hai." },
     ],
   },
   muslim: {
@@ -75,7 +75,7 @@ const EXTRA: Record<string, { intro: string; body: { h: string; p: string }[]; f
   },
   sikh: {
     intro:
-      "Anand Karaj ke card ki shuruaat ੴ se hoti hai. In templates mein Ik Onkar, Khanda aur Gurmukhi text ke liye sahi fonts lage hain.",
+      "Anand Karaj ke card ki shuruaat Ik Onkar se hoti hai. In templates mein Ik Onkar, Khanda aur Gurmukhi text ke liye sahi fonts lage hain.",
     body: [
       { h: "Gurudwara aur langar", p: "Gurudwara ka naam, Anand Karaj ka samay, aur langar ka zikr — teeno likh dijiye. Zyadatar parivaar 'Sarbat da bhala' ya 'Dhan Guru Nanak' footer mein rakhte hain." },
       { h: "Gurmukhi fonts", p: "Phulkari Marigold template poora Gurmukhi mein hai. Mukta aur Rozha One Gurmukhi ke saath Devanagari dono support karte hain, to mixed card bhi ban jaata hai." },
@@ -89,7 +89,7 @@ const EXTRA: Record<string, { intro: string; body: { h: string; p: string }[]; f
     intro:
       "Jain vivah ke card sattvik aur shaant hote hain — halke rang, Namokar mantra aur lotus ya Ahimsa hand jaise symbols.",
     body: [
-      { h: "Mantra aur wording", p: "Upar ॥ णमोकार महामंत्र ॥ ya 'Jai Jinendra', aur neeche parivaar ka naam — yahi classic format hai. Bhojan ke timing ka zikr bhi kai parivaar card par karte hain." },
+      { h: "Mantra aur wording", p: "Upar “Namokar Mahamantra” ya “Jai Jinendra”, aur neeche parivaar ka naam — yahi classic format hai. Bhojan ke timing ka zikr bhi kai parivaar card par karte hain." },
       { h: "Rang", p: "Ivory-gold, shwet-sage aur lavender teeno hamare Jain templates mein hain. Yeh teeno print mein bahut saaf aate hain aur shaadi ke mandap ke decor se match karte hain." },
     ],
     faq: [
@@ -101,7 +101,7 @@ const EXTRA: Record<string, { intro: string; body: { h: string; p: string }[]; f
     intro:
       "Buddhist wedding cards mein Dharmachakra, lotus aur metta ki ek line — bas itna hi kaafi hai.",
     body: [
-      { h: "Blessing lines", p: "'Sabbe satta sukhi hontu', 'May all beings be happy' ya 'सर्वे भवन्तु सुखिनः' — koi bhi line footer mein daal sakte hain. Templates mein yeh pehle se hai." },
+      { h: "Blessing lines", p: "'Sabbe satta sukhi hontu', 'May all beings be happy' ya “Sarve Bhavantu Sukhinah” — koi bhi line footer mein daal sakte hain. Templates mein yeh pehle se hai." },
       { h: "Simple rakhein", p: "Buddhist invites mein kam decoration aur zyada khaali jagah achhi lagti hai. Teal aur sage palettes isi wajah se chuni gayi hain." },
     ],
     faq: [
@@ -203,7 +203,7 @@ export default async function CategoryPage({ params }: Props) {
           <span aria-hidden className="mr-2">{c.emoji}</span>
           {c.name} invitation cards
         </h1>
-        <p className="mt-1 text-[13px] uppercase tracking-[0.14em] text-ink/40">{c.hindi}</p>
+        <p className="mt-1 text-[13px] uppercase tracking-[0.14em] text-ink/40">{c.subtitle}</p>
         <p className="mt-4 max-w-2xl text-[15px] leading-7 text-ink/65">
           {extra?.intro || c.blurb} {list.length} card designs aur {videos.length} video invites —
           sab free, aur editor mein naam, date, venue, rang aur font sab badal sakte hain.

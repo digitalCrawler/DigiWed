@@ -8,7 +8,7 @@ import { TEMPLATES } from "@/lib/templates";
 export const metadata: Metadata = {
   title: "Support Us — Donate ₹50 (or Any Amount)",
   description:
-    "Shaadi Card Studio is free for everyone. If a card we made helped you, you can send a small thank-you gift over UPI — ₹50 suggested, any amount welcome, and nothing is required.",
+    "DigiWeds is free for everyone. If a card we made helped you, you can send a small thank-you gift over UPI — ₹50 suggested, any amount welcome, and nothing is required.",
   alternates: { canonical: "/support" },
 };
 

@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Shaadi Card Studio handles your data: no accounts, no photo uploads, drafts stored only in your own browser, and what Google AdSense cookies do.",
+    "How DigiWeds handles your data: no accounts, no photo uploads, drafts stored only in your own browser, and what Google AdSense cookies do.",
   alternates: { canonical: "/privacy" },
 };
 

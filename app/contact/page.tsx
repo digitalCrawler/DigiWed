@@ -8,7 +8,7 @@ import { CATEGORIES } from "@/lib/templates";
 export const metadata: Metadata = {
   title: "Contact & Template Requests",
   description:
-    "Write to Shaadi Card Studio — request a wedding card template, report a problem with the editor, or ask anything about making your invitation.",
+    "Write to DigiWeds — request a wedding card template, report a problem with the editor, or ask anything about making your invitation.",
   alternates: { canonical: "/contact" },
 };
 

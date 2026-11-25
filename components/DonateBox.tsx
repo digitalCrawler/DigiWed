@@ -27,7 +27,7 @@ export default function DonateBox({ compact = false }: { compact?: boolean }) {
     return Number.isFinite(n) && n >= DONATION_MIN ? Math.round(n) : DONATION_DEFAULT;
   }, [amount, custom]);
 
-  const link = useMemo(() => upiLink(value, `Shaadi Card Studio — thank you gift`), [value]);
+  const link = useMemo(() => upiLink(value, `DigiWeds — thank you gift`), [value]);
 
   useEffect(() => {
     if (!configured) return;

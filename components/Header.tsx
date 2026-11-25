@@ -6,16 +6,16 @@ export default function Header() {
   return (
     <header className="no-print sticky top-0 z-30 border-b border-moss/12 bg-cream/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
-        <Link href="/" className="group flex items-center gap-2.5" aria-label="Shaadi Card Studio home">
+        <Link href="/" className="group flex items-center gap-2.5" aria-label="DigiWeds home">
           <span className="grid h-10 w-10 place-items-center rounded-leaf bg-gradient-to-br from-sage to-moss text-cream shadow-soft transition-transform duration-500 group-hover:rotate-[-8deg]">
             <Leaf size={19} className="animate-sway" />
           </span>
           <span className="leading-tight">
             <span className="block font-display text-[17.5px] font-bold tracking-tight text-moss">
-              Shaadi Card Studio
+              DigiWeds
             </span>
             <span className="block font-ui text-[9.5px] uppercase tracking-[0.2em] text-sage">
-              A garden at dusk
+              Free cards & video invites
             </span>
           </span>
         </Link>

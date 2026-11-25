@@ -75,7 +75,7 @@ export default function TemplatesPage() {
               <h2 id={`cat-${c.slug}`} className="font-display text-xl font-semibold text-ink">
                 <span aria-hidden className="mr-1.5">{c.emoji}</span>
                 {c.name}
-                <span className="ml-2 font-body text-[12px] font-normal text-ink/40">{c.hindi}</span>
+                <span className="ml-2 font-body text-[12px] font-normal text-ink/40">{c.subtitle}</span>
               </h2>
               <Link href={`/category/${c.slug}`} className="btn-chip shrink-0">
                 {rest > 0 ? `+${rest} more →` : "Category page →"}

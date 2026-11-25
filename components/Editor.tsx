@@ -27,7 +27,7 @@ const FRAME_LIST: { key: FrameKey; label: string }[] = [
 ];
 
 const MOTIF_LIST: { key: MotifKey; label: string }[] = [
-  { key: "om", label: "ॐ Om" },
+  { key: "om", label: "Om" },
   { key: "kalash", label: "Kalash" },
   { key: "lotus", label: "Lotus" },
   { key: "bismillah", label: "Crescent" },
@@ -51,8 +51,8 @@ const TEXTURES: { key: CardDesign["texture"]; label: string }[] = [
 const FONT_GROUPS: { label: string; keys: FontKey[] }[] = [
   { label: "Serif & display", keys: ["playfair", "cormorant", "marcellus", "cinzel", "italiana", "lora"] },
   { label: "Calligraphy", keys: ["greatvibes", "dancing", "parisienne"] },
-  { label: "हिंदी / ਪੰਜਾਬੀ", keys: ["tiro", "mukta", "rozha"] },
-  { label: "اردو / عربي", keys: ["nastaliq", "amiri"] },
+  { label: "Hindi / Punjabi", keys: ["tiro", "mukta", "rozha"] },
+  { label: "Urdu / Arabic", keys: ["nastaliq", "amiri"] },
   { label: "Sans", keys: ["inter"] },
 ];
 

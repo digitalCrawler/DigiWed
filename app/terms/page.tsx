@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "Terms for using Shaadi Card Studio: what you may do with the cards you create, what we promise, and what we do not.",
+    "Terms for using DigiWeds: what you may do with the cards you create, what we promise, and what we do not.",
   alternates: { canonical: "/terms" },
 };
 

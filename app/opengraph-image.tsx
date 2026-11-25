@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { CATEGORIES, TEMPLATES } from "@/lib/templates";
 
 export const alt =
-  "Shaadi Card Studio — free wedding invitation card maker for every faith";
+  "DigiWeds — free wedding invitation card maker for every faith";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -24,7 +24,7 @@ export default function OgImage() {
       >
         <div style={{ display: "flex", alignItems: "center", gap: 14, fontSize: 26, color: "#55673f" }}>
           <span>💐</span>
-          <span style={{ letterSpacing: 4 }}>SHAADI CARD STUDIO</span>
+          <span style={{ letterSpacing: 5 }}>DIGIWEDS</span>
         </div>
 
         <div style={{ display: "flex", fontSize: 70, lineHeight: 1.12, marginTop: 26, fontWeight: 700 }}>

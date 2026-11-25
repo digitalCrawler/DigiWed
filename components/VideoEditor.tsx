@@ -22,7 +22,7 @@ const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v
 
 const FRAME_LIST: FrameKey[] = ["mandala", "arch", "wreath", "minimal", "corners", "temple", "ring", "paisley"];
 const MOTIF_LIST: { key: MotifKey; label: string }[] = [
-  { key: "om", label: "ॐ Om" }, { key: "kalash", label: "Kalash" }, { key: "lotus", label: "Lotus" },
+  { key: "om", label: "Om" }, { key: "kalash", label: "Kalash" }, { key: "lotus", label: "Lotus" },
   { key: "bismillah", label: "Crescent" }, { key: "cross", label: "Cross" }, { key: "khanda", label: "Khanda" },
   { key: "chakra", label: "Chakra" }, { key: "jain", label: "Ahimsa" }, { key: "dove", label: "Dove" },
   { key: "rings", label: "Rings" }, { key: "heart", label: "Heart" }, { key: "none", label: "None" },
@@ -30,8 +30,8 @@ const MOTIF_LIST: { key: MotifKey; label: string }[] = [
 const FONT_GROUPS: { label: string; keys: FontKey[] }[] = [
   { label: "Serif & display", keys: ["playfair", "cormorant", "marcellus", "cinzel", "italiana", "lora"] },
   { label: "Calligraphy", keys: ["greatvibes", "dancing", "parisienne"] },
-  { label: "हिंदी / ਪੰਜਾਬੀ", keys: ["tiro", "mukta", "rozha"] },
-  { label: "اردو / عربي", keys: ["nastaliq", "amiri"] },
+  { label: "Hindi / Punjabi", keys: ["tiro", "mukta", "rozha"] },
+  { label: "Urdu / Arabic", keys: ["nastaliq", "amiri"] },
   { label: "Sans", keys: ["inter"] },
 ];
 

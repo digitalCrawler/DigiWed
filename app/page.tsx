@@ -8,7 +8,7 @@ import Faq, { QA } from "@/components/Faq";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Free Wedding Invitation Card Maker — Hindu, Muslim, Christian, Sikh & More",
+  title: "DigiWeds — Free Wedding Card & Video Invitation Maker",
   description: site.description,
   alternates: { canonical: "/" },
 };
@@ -223,7 +223,7 @@ export default function Home() {
               </span>
               <span>
                 <span className="block font-display text-[15.5px] font-semibold text-ink">
-                  {c.name} <span className="font-body text-[12px] font-normal text-ink/40">· {c.hindi}</span>
+                  {c.name} <span className="font-body text-[12px] font-normal text-ink/40">· {c.subtitle}</span>
                 </span>
                 <span className="mt-0.5 block text-[13px] leading-6 text-ink/55">{c.blurb}</span>
               </span>
