@@ -104,6 +104,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icon.svg" />
         <link rel="manifest" href="/manifest.webmanifest" />
+        {/* how AdSense confirms the site is yours, alongside /ads.txt */}
+        {adsClient ? <meta name="google-adsense-account" content={adsClient} /> : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
